@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: titanic-application
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/surybang/titanic-deployment.git
+    targetRevision: main
+    path: deployment
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: user-fabienhos
+  syncPolicy:
+    automated:
+      selfHeal: true
