@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: titanic
-        image: surybang/application:v0.0.1
+        image: surybang/application:v0.0.2
         ports:
         - containerPort: 8000
         resources:
